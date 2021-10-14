@@ -1,5 +1,6 @@
 // programma per verificare la presenza nella lista membri della mail inserita dall'utente
 
+// lista membri con accesso consentito
 const members = [
     'corda.valerio05@gmail.com',
     'lcostin40@gmail.com',
@@ -15,7 +16,18 @@ const members = [
     'alessia.misciagna98@gmail.com',
     'nicola.perera96@gmail.com'
 ];
-console.log(members);
 
+// chiedo all'utente la sua mail
 let userMail = prompt('scrivi la tua email');
-console.log(userMail);
+
+// controllo se la mail inserita dall'utente è uguale ad una presente nella lista
+for (let i = 0; i < members.length; i++) {
+    let memberMail = members[i];
+    
+    if (memberMail == userMail) {
+        console.log('funziona');
+    }
+    else {
+        console.log('non sei in lista');
+    }
+}
