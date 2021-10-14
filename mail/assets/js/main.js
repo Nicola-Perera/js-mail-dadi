@@ -27,7 +27,4 @@ for (let i = 0; i < members.length; i++) {
     if (memberMail == userMail) {
         console.log('funziona');
     }
-    else {
-        console.log('non sei in lista');
-    }
 }
