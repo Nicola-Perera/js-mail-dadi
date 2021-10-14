@@ -15,5 +15,7 @@ const members = [
     'alessia.misciagna98@gmail.com',
     'nicola.perera96@gmail.com'
 ];
-
 console.log(members);
+
+let userMail = prompt('scrivi la tua email');
+console.log(userMail);
