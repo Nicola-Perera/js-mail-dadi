@@ -7,3 +7,13 @@ console.log(userDieResult);
 let computerDieResult = Math.floor(Math.random() * 6 + 1);
 console.log(computerDieResult);
 
+if (userDieResult > computerDieResult) {
+    console.log('hai vinto');
+}
+else if (userDieResult < computerDieResult) {
+    console.log('hai perso');
+}
+else if (userDieResult === computerDieResult) {
+    console.log('pareggio! riprova');
+}
+
