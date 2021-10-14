@@ -17,14 +17,22 @@ const members = [
     'nicola.perera96@gmail.com'
 ];
 
+const result = document.getElementById('esito');
+
 // chiedo all'utente la sua mail
 let userMail = prompt('scrivi la tua email');
-
+let valueTrue;
 // controllo se la mail inserita dall'utente è uguale ad una presente nella lista
 for (let i = 0; i < members.length; i++) {
     let memberMail = members[i];
     
     if (memberMail == userMail) {
-        console.log('funziona');
+
+        valueTrue = `<h1>La tua email è stata approvata :) BENTORNATO!</h1>`;
+
+        result.innerHTML += valueTrue;
+    }
+    else {
+        break;
     }
 }
