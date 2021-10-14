@@ -18,21 +18,23 @@ const members = [
 ];
 
 const result = document.getElementById('esito');
+const submit = document.getElementById('submit');
 
-// chiedo all'utente la sua mail
-let userMail = prompt('scrivi la tua email');
-let valueTrue;
+submit.addEventListener('click', function(){
+
+    // salvo la email dell'utente
+    const userMail = document.getElementById('email');
+    const userMailValue = userMail.value;
+
 // controllo se la mail inserita dall'utente è uguale ad una presente nella lista
 for (let i = 0; i < members.length; i++) {
     let memberMail = members[i];
     
-    if (memberMail == userMail) {
+    if (memberMail == userMailValue) {
 
-        valueTrue = `<h1>La tua email è stata approvata :) BENTORNATO!</h1>`;
+        const valueTrue = `<h1>La tua email è stata approvata :) BENTORNATO!</h1>`;
 
-        result.innerHTML += valueTrue;
-    }
-    else {
-        break;
+        result.innerHTML = valueTrue;
     }
 }
+})
